@@ -1,3 +1,12 @@
 httpx
 fake-useragent
 requests
+
+bandit
+safety
+locust
+pytest
+pre-commit
+ruff
+mypy
+django-stubs
