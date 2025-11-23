@@ -1,0 +1,10 @@
+{
+    "active_lists": [
+        "site_brasil.txt",
+        "site_portugal.txt",
+        "social_network.txt",
+        "etc.txt"
+    ],
+    "deactivated_lists": [],
+    "temporary_path": null
+}
