@@ -29,7 +29,7 @@ def save_config(data: dict) -> None:
 
     try:
         with open(file_path, 'w', encoding='utf-8') as file:
-            json.dump(data, file, sort_keys=False, indent=2, allow_unicode=True)
+            json.dump(data, file, sort_keys=False, indent=2, ensure_ascii=False)
     except FileNotFoundError:
         print('Configuration file not found')
         sys.exit(1)

@@ -1,101 +1,104 @@
+# True-Info — simple tool to obtain reliable information
 
-# Webscrapper — ferramenta simples para obter informação confiável
+[![Bandit](https://github.com/LuisGomes18/True-Info/actions/workflows/bandit.yml/badge.svg)](https://github.com/LuisGomes18/True-Info/actions/workflows/bandit.yml)
 
-Este projeto ajuda a pesquisar informação sobre um tema, evitando automaticamente sites que você considera pouco confiáveis (por exemplo: sites de desinformação, canais negacionistas, ou fontes que você prefere bloquear).
+[![CodeQL](https://github.com/LuisGomes18/True-Info/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/LuisGomes18/True-Info/actions/workflows/github-code-scanning/codeql)
 
-O foco aqui é praticidade: pessoas não técnicas podem usar o programa pelo menu, sem tocar em código.
+This project helps you search for information on a topic while automatically avoiding websites you consider unreliable (e.g., misinformation sites, denialist channels, or sources you prefer to block).
 
-Como começar (rápido)
+The focus here is practicality: non-technical users can operate the program through a menu, without touching any code.
 
-- Abra um terminal na pasta do projeto.
-- (Opcional) Crie e ative um ambiente virtual:
+## Getting started (quick)
+
+* Open a terminal in the project folder.
+* Create and activate a virtual environment:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 ```
 
-- Instale dependências:
+* Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-- Execute o programa:
+* Run the program:
 
 ```bash
 python app.py
 ```
 
-Usando o menu (passo a passo)
+## Using the menu (step-by-step)
 
-Ao iniciar, você verá um menu com opções simples:
+When the app starts, you’ll see a menu with simple options:
 
-- `1 - Fazer pesquisa`: pesquisa um tema e traz resultados filtrados.
-- `2 - Adicionar dominio blacklist`: adiciona um site à lista de sites bloqueados.
-- `3 - Remover dominio blacklist`: remove um site da lista bloqueada.
-- `4 - Ativar lista da blacklist`: ativa uma das listas prontas (por exemplo: Brasil, Portugal).
-- `5 - Desativar lista blacklist`: desativa temporariamente uma lista ativa.
-- `0 - Sair`: fecha o programa.
+* `1 - Run search`: searches a topic and returns filtered results.
+* `2 - Add domain to blacklist`: adds a website to the blocked list.
+* `3 - Remove domain from blacklist`: removes a website from the blocked list.
+* `4 - Activate blacklist list`: enables one of the pre-made lists (e.g., Brazil, Portugal).
+* `5 - Deactivate blacklist list`: temporarily disables an active list.
+* `0 - Exit`: closes the program.
 
-O menu guia a entrada — você só precisa digitar o número da opção e seguir as instruções na tela.
+The menu guides your input — just type the option number and follow the on-screen instructions.
 
-Onde ficam as listas
+## Where the lists are stored
 
-- As listas de sites estão na pasta `data/` (arquivos `.txt`, um domínio por linha).
-- É recomendado usar o menu para alterar as listas, assim as mudanças ficam salvas automaticamente.
+* The site lists are located in the `data/` folder (`.txt` files, one domain per line).
+* It is recommended to use the menu to update the lists so changes are saved automatically.
 
-Recomendações rápidas
+## Quick recommendations
 
-- Sempre documente por que um site foi bloqueado (por ex.: link de referência). Use o histórico do Git para registrar mudanças importantes.
-- Caso tenha dúvidas, peça a alguém com experiência em verificação de informação para revisar as exclusões.
+* Always document why a site was blocked (e.g., reference link). Use Git history to record important changes.
+* When in doubt, ask someone experienced in information verification to review the exclusions.
 
-Informações técnicas e melhorias
+## Technical info and improvements
 
-Se você for desenvolvedor ou quiser ver sugestões técnicas (como adicionar testes, formatar o código, ou transformar o projeto em pacote), consulte `todo.md` — lá estão as melhorias recomendadas.
+If you’re a developer or want to see technical suggestions (such as adding tests, formatting code, or turning the project into a package), check `todo.md` — it contains the recommended improvements.
 
-Ajuda
+## Help
 
-Se precisar de ajuda, diga o que tentou fazer e descreva o problema — posso guiar passo a passo.
+If you need help, tell me what you tried and describe the issue — I can guide you step by step.
 
 ---
-Versão simplificada do README para usuários não técnicos.
 
-Seção técnica (rápida)
+## Simplified README version for non-technical users.
 
-Para quem preferir instruções técnicas mais diretas, aqui está um resumo curto e sem complicação.
+## Technical section (quick)
 
-- Requisitos: `Python 3.8+` e `pip`.
-- Abra um terminal na pasta do projeto.
-- (Recomendado) crie e ative um ambiente virtual:
+For those who prefer straightforward technical instructions, here’s a short and simple summary.
+
+* Requirements: `Python 3.8+` and `pip`.
+* Open a terminal in the project folder.
+* (Recommended) Create and activate a virtual environment:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 ```
 
-- Instale dependências:
+* Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-- Execute o programa:
+* Run the program:
 
 ```bash
 python app.py
 ```
 
-Dicas rápidas para editar listas
+## Quick tips for editing lists
 
-- Editar via menu: rode o programa e use as opções 2–5 para adicionar/remover/ativar/desativar listas sem tocar em arquivos.
-- Editar manualmente: abra os arquivos em `data/` e adicione/remova domínios (um por linha). Depois comite as mudanças se quiser salvar o histórico.
+* **Edit via menu:** run the program and use options 2–5 to add/remove/enable/disable lists without touching files.
+* **Edit manually:** open the files in `data/` and add/remove domains (one per line). Commit the changes if you want to keep track of them.
 
+## Ethics and responsibility
 
-Ética e responsabilidade
+Filtering tools do not replace human verification. Use ethical, verifiable criteria when building exclusion lists. Avoid unjustified censorship; prefer public, replicable, and evidence-based criteria.
 
-Ferramentas de filtragem não substituem verificação humana. Use critérios éticos e verificáveis ao construir listas de exclusão. Evite censura indevida; prefira critérios públicos, replicáveis e baseados em evidências.
+## Contributions
 
-Contribuições
-
-PRs são bem-vindos. Para mudanças de política de filtragem, descreva critérios e evidências. Para funcionalidades, inclua testes quando possível.
+PRs are welcome. For policy changes related to filtering, describe criteria and evidence. For new features, include tests when possible.

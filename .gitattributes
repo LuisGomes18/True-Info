@@ -1,0 +1,46 @@
+*.py     text=auto eol=lf
+*.sh     text eol=lf
+*.md     text
+*.txt    text
+
+*.json   text
+*.yml    text
+*.yaml   text
+*.csv    text
+
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.db     binary
+*.sqlite binary
+
+.env                 export-ignore
+.env.*               export-ignore
+/.venv               export-ignore
+/.venv/**            export-ignore
+/.cache              export-ignore
+/.cache/**           export-ignore
+/tests               export-ignore
+/tests/**            export-ignore
+/docs/drafts/**      export-ignore
+
+/data/**             export-ignore
+/logs/**             export-ignore
+
+*.sh    export-subst
+
+*.py linguist-language=Python
+
+poetry.lock          binary
+Pipfile.lock         binary
+
+*.css   text
+*.html  text
+*.js    text
+
+/dist/**             export-ignore
+/build/**            export-ignore
+
+*       text=auto
